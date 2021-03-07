@@ -31,9 +31,11 @@ document.getElementById("submit").addEventListener("click", function() {
       }
     ];
 
-    const randomPhrase = Math.random() * (2 - 0) + 0;
-    console.log(randomPhrase);
+    const randomPhrase = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
 
+    document.getElementById("phrase").innerText = phrases[randomPhrase].phrase;
+    document.getElementById("picture").src = phrases[randomPhrase].src;
+    
 
     // // Random phrases and its pictures (represented as an array of objects)
     // imagesArray = new Array(3);
